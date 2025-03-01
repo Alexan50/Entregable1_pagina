@@ -2,16 +2,15 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Tienda de Electrodomésticos</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             text-align: center;
         }
         .container {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: respeat(3, 1fr);
             gap: 20px;
             padding: 20px;
         }
@@ -19,39 +18,21 @@
             cursor: pointer;
             text-align: center;
         }
-        .item img {
+        .item{
+            cursor: pointer;
+            text-align: center;
+        }
+        .item img{
             width: 150px;
             height: auto;
         }
     </style>
 </head>
 <body>
-    <h1>Bienvenido a Mi Tienda de Electrodomésticos</h1>
-    <div class="container">
+    <h1>Bienvenido a Alex.TEC</h1>
+    <div class="=container">
         <div class="item" onclick="location.href='laptops.html'">
             <img src="laptop.webp" alt="Laptops">
             <p>LAPTOPS</p>
         </div>
-        <div class="item" onclick="location.href='tablets.html'">
-            <img src="tablet.jpg" alt="Tablets">
-            <p>TABLETS</p>
-        </div>
-        <div class="item" onclick="location.href='computadora.html'">
-            <img src="computadora.jpg" alt="Computadora">
-            <p>COMPUTADORA</p>
-        </div>
-        <div class="item" onclick="location.href='iphones.html'">
-            <img src="iphone.jpg" alt="iPhones">
-            <p>IPHONES</p>
-        </div>
-        <div class="item" onclick="location.href='tvsmart.html'">
-            <img src="tvsmart.jpg" alt="TV Smart">
-            <p>TV SMART</p>
-        </div>
-        <div class="item" onclick="location.href='impresoras.html'">
-            <img src="impresora.jpg" alt="Impresoras">
-            <p>IMPRESORAS</p>
-        </div>
-    </div>
-</body>
-</html>
+</body> 
