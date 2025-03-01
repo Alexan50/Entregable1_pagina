@@ -8,6 +8,32 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #f8f8f8;
+            position: relative;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+
+        }
+        .icons {
+            position: absolute;
+            right: 30px;
+            display: flex;
+            gap: 15px;
+        }
+        .icons a {
+            text-decoration: none;
+            font-size: 20px;
+            color: black;
         }
         .container {
             display: grid;
@@ -27,7 +53,14 @@
     </style>
 </head>
 <body>
-    <h1>Bienvenido a Alex.TEC</h1>
+    <div class="header">
+        <div class="logo">Bienvenido a Alex.TEC</div>
+        <div class="icons">
+            <a href="carrito.html">🛒</a>
+            <a href="perfil.html">👤</a>
+    </div>
+</div>
+
     <div class="container">
         <div class="item" onclick="location.href='laptops.html'">
             <img src="laptop.webp" alt="Laptops">
