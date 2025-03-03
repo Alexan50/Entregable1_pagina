@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laptop HP Core i7</title>
+    <title>Laptop HP - Ryzen 5</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -61,26 +61,31 @@
             margin-top: 40px;
         }
     </style>
+<script>
+    function Comprar() {
+        let precio = 1000;
+        let Nombre = "Laptop HP - Ryzen 5";
+        window.location.href = `pago.html?precio=${precio}&nombre=${encodeURIComponent(Nombre)}`;
+        
+    }
+</script>
 </head>
 <body>
     <div class="header">
         <a href="index.html">Inicio</a>
-</div>
+    </div>
     <div class="container">
         <div class="info">
-            <h2>Laptop HP Core i7</h2>
-            <p><span>$</span>2.000</p>
-            <button class="buy-btn" onclick="window.location.href='pago.html'">Comprar</button>
-  
+            <h2>Laptop HP - Ryzen 5</h2>
+            <p><span>$</span>1000</p>
+            <button class="buy-btn" onclick="Comprar()">Comprar</button> 
         </div>
         <div>
             <img src="laptop3.webp" alt="Laptop HP - Ryzen 5" width="400">
         </div>
     </div>
-
     <div class="footer">
         <p>© 2025 Alex.TEC - Todos los derechos reservados</p>
     </div>
-
 </body>
 </html>

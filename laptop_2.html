@@ -62,10 +62,10 @@
         }
     </style>
 <script>
-    function Comprar(){
-        let precio = 2000;
+    function Comprar() {
+        let precio = 2800;
         let Nombre = "Laptop HP Core i7";
-        window.location.href = `pago.html?precio=${precio}&nombre=${encodeURIComponent(nombre)}`;
+        window.location.href = `pago.html?precio=${precio}&nombre=${encodeURIComponent(Nombre)}`;
         
     }
 </script>
@@ -77,8 +77,8 @@
     <div class="container">
         <div class="info">
             <h2>Laptop HP Core i7</h2>
-            <p><span>$</span>2.000</p>
-            <button class="buy-btn" onclick="comprar()">Comprar</button> 
+            <p><span>$</span>2800</p>
+            <button class="buy-btn" onclick="Comprar()">Comprar</button> 
         </div>
         <div>
             <img src="laptop2.webp" alt="Laptop HP Core i7" width="400">
@@ -89,5 +89,3 @@
     </div>
 </body>
 </html>
-
-</body>
