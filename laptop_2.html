@@ -61,26 +61,33 @@
             margin-top: 40px;
         }
     </style>
+<script>
+    function Comprar(){
+        let precio = 2000;
+        let Nombre = "Laptop HP Core i7";
+        window.location.href = `pago.html?precio=${precio}&nombre=${encodeURIComponent(nombre)}`;
+        
+    }
+</script>
 </head>
 <body>
     <div class="header">
         <a href="index.html">Inicio</a>
-</div>
+    </div>
     <div class="container">
         <div class="info">
             <h2>Laptop HP Core i7</h2>
             <p><span>$</span>2.000</p>
-            <button class="buy-btn" onclick="window.location.href='pago.html'">Comprar</button>
-  
+            <button class="buy-btn" onclick="comprar()">Comprar</button> 
         </div>
         <div>
-            <img src="laptop2.webp" alt="Laptop Dell - core i7" width="400">
+            <img src="laptop2.webp" alt="Laptop HP Core i7" width="400">
         </div>
     </div>
-
     <div class="footer">
         <p>© 2025 Alex.TEC - Todos los derechos reservados</p>
     </div>
-
 </body>
 </html>
+
+</body>

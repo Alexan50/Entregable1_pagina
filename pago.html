@@ -50,22 +50,17 @@
             background-color: #0d0d1a;
         }
     </style>
-</head>
-<body>
-    <div class="payment-container">
-        <button class="apple-pay">Pay</button>
-        <p>o pagar con tarjeta bancaria</p>
-        <input type="email" placeholder="E-mail">
-        <input type="text" placeholder="Detalles de la tarjeta" maxlength="19">
-        <input type="text" placeholder="MM / YY" maxlength="5">
-        <input type="text" placeholder="CVC" maxlength="3">
-        <input type="text" placeholder="Nombre del titular">
-        <select>
-            <option>Estados Unidos</option>
-            <option>Peru</option>
-            <option>España<a href=""></a></option>
-        </select>
-        <input type="text" placeholder="Codigo postal">
-        <button class="pay-btn">Pagar 2.000$</button>
-    </div>
-</body>
+<script>
+    function obtenerParametro(nombre) {
+        const params = new URLSearchParams(window.location.search);
+        return params.get(nombre);
+    }
+
+    window.onload = function() {
+        let nombreProducto = obtenerParametro("nombre") || "Producto desconocido";
+        let precioProducto = obtenerParametro("precio") || "0";
+
+        document.getElementById("nombreProducto").innerText = nombreProducto;
+        document.getElementById("precioProducto").innerText = `$${precioProducto}`;
+    };
+</script>
