@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO usuarios (nombre, email, contraseña) VALUES ('$nombre', '$email', '$password')";
 
     if ($conexion->query($sql) === TRUE) {
-        echo "Registro exitoso. <a href='login.php'>Iniciar sesión</a>";
+        echo "Registro exitoso. <a href='http://localhost/Entregable1/login.php'>Iniciar sesión</a>";
     } else {
         echo "Error: " . $conexion->error;
     }
