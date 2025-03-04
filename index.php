@@ -43,7 +43,7 @@ session_start();
     $resultado = $conexion->query($sql);
 
     while ($producto = $resultado->fetch_assoc()) {
-        echo "<div class='item' onclick=\"location.href='comprar.php?id=" . $producto['id'] . "'\">
+        echo "<div class='item' onclick=\"location.href='php/comprar.php?id=" . $producto['id'] . "'\">
                 <img src='imagenes/" . $producto['imagen'] . "' alt='" . $producto['nombre'] . "'>
                 <h4>" . $producto['nombre'] . "</h4>
                 <p>" . $producto['descripcion'] . "</p>
