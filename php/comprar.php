@@ -1,6 +1,5 @@
-<?php
+<?php 
 require_once '../php/db.php';
-
 
 if (!isset($_GET['id'])) {
     die("Error: No se proporcionó un ID de producto.");
@@ -33,31 +32,51 @@ $producto = $resultado->fetch_assoc();
             margin: 0;
             font-family: Arial, sans-serif;
             text-align: center;
-
         }
-        .contenedor {
-            max-width: 600px; 
-            width: 90%; 
-            background: #f8f8f8;
+        .volver {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .producto {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            max-width: 800px;
+            width: 90%;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .producto img {
+            width: 300px;
+            border-radius: 5px;
+        }
+        .info {
+            text-align: left;
+        }
+        .comprar-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
         }
         .recomendaciones {
             display: flex;
             gap: 20px;
             flex-wrap: wrap;
-            justify-content: center; 
-
+            justify-content: center;
         }
         .recomendacion {
             text-align: center;
             width: 150px;
         }
         .recomendacion img {
-            width: 100px;
-            height: auto;
-            border-radius: 10px;
+            width: 150px; 
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
         }
         .recomendacion a {
             display: block;
@@ -69,13 +88,18 @@ $producto = $resultado->fetch_assoc();
     </style>
 </head>
 <body>
-    <div class="contenedor">
-    <h1><?php echo $producto['nombre']; ?></h1>
-    <img src="/Entregable1/imagenes/<?php echo $producto['imagen']; ?>" alt="<?php echo $producto['nombre']; ?>" width="200">
+    <div class="volver">
+        <a href="http://localhost/Entregable1/index.php">Volver</a>
+    </div>
 
-
-    <p><?php echo $producto['descripcion']; ?></p>
-    <p>Precio: $<?php echo $producto['precio']; ?></p>
+    <div class="producto">
+        <div class="info">
+            <h1><?php echo $producto['nombre']; ?></h1>
+            <p><?php echo $producto['descripcion']; ?></p>
+            <p><strong>Precio: $<?php echo $producto['precio']; ?></strong></p>
+            <a href="comprar.php?id=<?php echo $producto['id']; ?>" class="comprar-btn">Comprar</a>
+        </div>
+        <img src="/Entregable1/imagenes/<?php echo $producto['imagen']; ?>" alt="<?php echo $producto['nombre']; ?>">
     </div>
     
     <h2>Productos Recomendados</h2>
@@ -94,8 +118,6 @@ $producto = $resultado->fetch_assoc();
         echo "</div>";
     }
     ?>
-</div>
-    
-    <a href="http://localhost/Entregable1/index.php">Volver</a>
+    </div>
 </body>
 </html>
