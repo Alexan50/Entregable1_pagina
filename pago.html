@@ -19,7 +19,9 @@
             margin: 50px auto;
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
+
+        } 
+        
         .apple-pay {
             background: black;
             color: white;
@@ -49,25 +51,61 @@
         .pay-btn:hover {
             background-color: #0d0d1a;
         }
+        .success-message {
+            display: none;
+            font-size: 20px;
+            color: green;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .back-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgb(33, 31, 31);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.back-button:hover {
+    background-color: darkred;
+}
+
     </style>
-<script>
-    function obtenerParametro(nombre) {
-        const params = new URLSearchParams(window.location.search);
-        return params.get(nombre);
-    }
+    <script>
+        function obtenerParametro(nombre) {
+            const params = new URLSearchParams(window.location.search);
+            return params.get(nombre);
+        }
 
-    window.onload = function() {
-        let nombreProducto = obtenerParametro("nombre") || "Producto desconocido";
-        let precioProducto = obtenerParametro("precio") || "0";
+        window.onload = function() {
+            let nombreProducto = obtenerParametro("nombre") || "Producto desconocido";
+            let precioProducto = obtenerParametro("precio") || "0";
 
-        document.getElementById("nombreProducto").innerText = nombreProducto
-        document.getElementById("precioProducto").innerText = `$${precioProducto}`;
-        document.getElementById("precioBoton").innerText = `$${precioProducto}`;
-    };
-</script>
+            document.getElementById("nombreProducto").innerText = nombreProducto;
+            document.getElementById("precioProducto").innerText = `$${precioProducto}`;
+            document.getElementById("precioBoton").innerText = `$${precioProducto}`;
+        };
+
+        function procesarPago() {
+            
+            document.getElementById("paymentContainer").style.display = "none";
+            
+            document.getElementById("successMessage").style.display = "block";
+        }
+
+        function volver() {
+            window.history.back(); 
+        }
+    </script>
 </head>
 <body>
-    <div class="payment-container">
+    <div id="paymentContainer" class="payment-container">
+        <button class="back-button" onclick="volver()">Volver</button>
+
         <button class="apple-pay">Pay</button>
         <p>O pagar con tarjeta bancaria</p>
 
@@ -86,7 +124,11 @@
         </select>
         <input type="text" placeholder="Código postal">
         
-        <button class="pay-btn">Pagar <span id="precioBoton">$0</span></button> 
+        <button class="pay-btn" onclick="procesarPago()">Pagar <span id="precioBoton">$0</span></button> 
+    </div>
+
+    <div id="successMessage" class="success-message">
+        ¡LOGRASTE OBTENER TU PEDIDO EXITOSAMENTE!
     </div>
 </body>
 </html>

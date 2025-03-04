@@ -97,7 +97,7 @@ $producto = $resultado->fetch_assoc();
             <h1><?php echo $producto['nombre']; ?></h1>
             <p><?php echo $producto['descripcion']; ?></p>
             <p><strong>Precio: $<?php echo $producto['precio']; ?></strong></p>
-            <a href="comprar.php?id=<?php echo $producto['id']; ?>" class="comprar-btn">Comprar</a>
+            <a class="comprar-btn" href="http://localhost/Entregable1/pago.html?nombre=<?php echo urlencode($producto['nombre']); ?>&precio=<?php echo $producto['precio']; ?>">Comprar</a>
         </div>
         <img src="/Entregable1/imagenes/<?php echo $producto['imagen']; ?>" alt="<?php echo $producto['nombre']; ?>">
     </div>
