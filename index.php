@@ -42,7 +42,7 @@ session_start();
 
     <form method="GET" class="search-bar">
         <input type="text" name="buscar" placeholder="Buscar productos...">
-        <button type="submit">🔍 Buscar</button>
+        <button type="submit"> Buscar</button>
     </form>
 
     <h2>Productos Disponibles</h2>
