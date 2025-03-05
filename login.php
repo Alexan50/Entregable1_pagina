@@ -37,6 +37,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <div class="container">
         <div class="form-box">
+        <a href="http://localhost/Entregable1/index.php" class="volver-btn">
+                <i class="fa-solid fa-arrow-left"></i> Volver
+            </a>
              <div class="avatar">
                  <i class="fa-solid fa-user"></i>
              </div>

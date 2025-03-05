@@ -1,3 +1,4 @@
+
 body {
     display: flex;
     justify-content: center;
@@ -5,6 +6,7 @@ body {
     height: 100vh;
     background: linear-gradient(135deg, #f5f6f9, #f4f4fa);
     font-family: Arial, sans-serif;
+    margin: 0;
 }
 
 .container {
@@ -15,20 +17,42 @@ body {
     height: 100vh;
 }
 
+
 .form-box {
+    position: relative;
     background: #333;
     padding: 30px;
     border-radius: 10px;
     backdrop-filter: blur(10px);
     text-align: center;
     width: 320px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
+
+
+.volver-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    text-decoration: none;
+    background-color: white;
+    color: #333;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.volver-btn:hover {
+    background-color: #94ecef;
+}
+
 
 .avatar i {
     font-size: 40px;
     color: #ffffff;
+    margin-bottom: 10px;
 }
-
 
 form input {
     width: 100%;
@@ -40,9 +64,11 @@ form input {
     color: rgb(251, 241, 241);
 }
 
+
 form input::placeholder {
     color: rgb(251, 248, 248);
 }
+
 
 .options {
     display: flex;
@@ -56,6 +82,7 @@ form input::placeholder {
     text-decoration: none;
 }
 
+
 button {
     width: 100%;
     padding: 10px;
@@ -66,8 +93,31 @@ button {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
+    transition: 0.3s ease;
 }
 
 button:hover {
     background: #ddd;
+}
+
+
+.mensaje-exito {
+    margin-top: 15px;
+    color: #00bfff; 
+    font-weight: bold;
+    text-align: center;
+}
+
+.mensaje-exito a {
+    color: white; 
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+.mensaje-error {
+    margin-top: 15px;
+    color: red;
+    font-weight: bold;
+    text-align: center;
 }

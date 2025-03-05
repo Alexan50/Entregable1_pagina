@@ -30,7 +30,7 @@ session_start();
         <div class="icons">
             <a href="carrito.html">🛒</a>
             <?php if (isset($_SESSION['usuario_id'])): ?>
-                <a href="perfil.php">👤 <?php echo $_SESSION['nombre']; ?></a>
+                <a href="php/perfil.php">👤 <?php echo $_SESSION['nombre']; ?></a>
                 <a href="cierre.php">🚪 Cerrar Sesión</a>
             <?php else: ?>
                 <a href="login.php">👤 Iniciar Sesión</a>
